@@ -1,0 +1,441 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platforms</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>b
+
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 20px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>Topic: UI Platforms, Bootstrap</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column 1, side buttons - tooltips -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">
+          <p>What is a CSS framework? It is essentially a bunch of pre-built CSS that you can use without re-inventing the wheel. Following the framework's guidelines, you'll need to add HTML elements and class names to build the website rather than actually having to build out all the CSS.
+          </p>
+          <p>Bootstrap is all about using Bootstrap classes, with HTML elements.</p>
+
+        </div>
+        <!-- column 2, less,sass -->
+        <div class="col-sm-12 col-md-2 m-2 button-container bg-light">
+    <div class="tooltip-area">
+            <div class="m-4">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Bootstrap  "
+              >
+                <img
+                  src="./cookies/bootstrap.jpg"
+                  style="width: 100px; height: auto;margin-left: auto; margin-right:auto;"
+                />
+            </div>
+              </div>
+
+        </div>
+      </div>
+              <!-- column 3, features -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">  
+          <p>Bootstrap incorporates many classes that professionalize and standardize a UI.</p>                           
+          <!-- containers -->
+          <!-- modal button configuration-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_containersModal"
+          >
+            Containers
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade"
+            id="bs_containersModal"
+            tabindex="-1"
+            aria-labelledby="bs_containersModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bs_containersModalLabel">
+                    Using Bootstrap Containers
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>A container is a wrapper &lt;div&gt; element that stores other elements. 
+The Bootstrap container class is fundamental to the layout - it supports a set of numeric, pixel-value breakpoints in responsive design. 
+
+These breakpoints are super-important and you will see them used in relation to other classes in Bootstrap, here they are:</p>
+                 <img src="./cookies/containersizes.png" alt="" style="width: 300px; height:auto;">
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- rows and columns -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_rowscolsModal"
+          >
+            Rows & Columns
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="bs_rowscolsModal"
+            tabindex="-1"
+            aria-labelledby="bs_rowscolsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bs_rowscolsModalLabel">
+                    Using Rows & Columns Effectively
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                   In Bootstrap, a container can contain one or more rows (class of row). These elements of class row are themselves containers for columns (elements of class col). The default behaviour here mirrors the underlying code base of CSS flex.
+                  </p>
+                  <p>The columns grid is based on a series of 12 parts, or units spaced horizontally along a row.</p>
+                  <img src="./cookies/12partsrow.png" alt="" style="width:250px; height: auto;">
+                  <p>The col-xxx class spans all of, or parts of, the 12 parts in a horizontal stretch, each column occupies 0 parts, 1 part, 2 parts..... 12 parts. The sum of all of the parts occupied by all of the columns in a row cannot be more than 12. How much space each column takes up is determined by (you guessed it) a class.</p>
+                  <img src="./cookies/cols-xx.png" alt="" style="width:350px; height: auto;">
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- cards -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_cardsModal"
+          >
+            Cards
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="bs_cardsModal"
+            tabindex="-1"
+            aria-labelledby="bs_cardsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bs_cardsModalLabel">
+                    Using Cards
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+Cards  can be created with HTML elements styled as a rectangular area,  designed to represent information. Cards keep  content clear and distinct on a web page. 
+
+Bootstrap has a Card class, with specific associated classes representing a part of the the card content, like title and sub-title, image area.
+
+Here is the layout.
+                  </p>
+                  <img src="./cookies/bscard.png" alt=""
+style="width:350px; height:auto;">
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- buttons -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_buttonsModal"
+          >
+            Buttons
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="bs_buttonsModal"
+            tabindex="-1"
+            aria-labelledby="bs_buttonsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bs_buttonsModalLabel">
+                    Using Buttons
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                Bootstrap classes support buttons as input elements, a tags and buttons. With Bootstrap, the button style is enhanced by using additional Bootstrap classes applied to the regular HTML elements.
+
+Note, btn is the base button class, btn-sm, btn-lg  is the size, btn-primary, btn-secondary, gives the colour.</p>
+<p>
+ <img src="./cookies/bs-buttonscode.png" alt="" style="width: 350px; height: auto;">
+
+</p>
+<p>This renders ...</p>
+<img src="./cookies/bs-buttonsrender.png"  alt="" style="width: 350px; height: auto;">
+<p>Buttons can be grouped as check boxes (multiple selections possible) ... </p>
+<div class="container-fluid">
+<div class="row">
+
+<img src="./cookies/bs-checkboxescode.png" alt="" style="width: 90%; height: auto;">
+
+
+  </div>
+  <div class="row">
+
+
+
+<p>or as radio buttons (mutually exclusive).
+  <img src="./cookies/bs-radiobuttoncode.png" alt="" style="width:300px;height:auto;"
+  </p>
+  <p>This radio button code renders...:</p>
+<img src="./cookies/bs-radiobuttonrender.png" alt="" style="width: 90%; height: auto;">
+  </div>
+  </div>
+</div>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+
+                    
+          <!-- Bootstrap navigation -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_navigationModal"
+          >
+            Navigation
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="bs_navigationModal"
+            tabindex="-1"
+            aria-labelledby="bs_navigationModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bs_navigationModalLabel">
+                    Using Bootstrap Navigation Support
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                Navigation is an important part of a page, or set of pages.
+
+Bootstrap offers a layered approach to navigation controls, starting with a basic set of techniques that are assistive technology friendly and recognized as standard. Always follow the documentation, this best supports any changes to Bootstrap and it's impact on assistive technology.
+
+To summarize the 3 strategies,
+<ul>
+<li>use a list with list items and a tags - <img src="./cookies/bs-listitemnav.png" alt="" style="width: 300px; height: auto;"></li>
+<li>use a div with a tags - <img src="./cookies/bs-divwithatagscode.png" alt="" style="width: 300px; height: auto;"></li>
+<li>use a nav tag, with a tags - <img src="./cookies/bs-navlnks.png"  alt="" style="width: 300px; height: auto;"></li>
+</ul>
+                </p>
+                <div> <p>A hamburger menu can be incorporated (anywhere) by making selective use of hide or collapse.
+<img src="./cookies/bs-navbarasalinks.png" alt="" style="width: 250px; height: auto;">
+                </p>
+              </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                              
+          <!-- bootstrap ui controls -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#bs_controlsModal"
+          >
+            Using Bootstrap UI Controls
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="bs_controlsModal"
+            tabindex="-1"
+            aria-labelledby="bs_controlsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ignoreFileModalLabel">
+                    Bootstrap Controls
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                   <p>Bootstrap includes classes that support multiple UI features, like accordions, tooltips, popovers</p> 
+                   <p>Make sure to use the <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap documentation</a> as you implement other Bootstrap classes in your UI.</p>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </body>
+</html>

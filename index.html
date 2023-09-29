@@ -1,0 +1,504 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>312 Review</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>
+    <!-------------------------------------------------------------->
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 10px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+      .card {
+        width: 135px;
+      }
+      .card-img {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>
+          Topics: Git/GitHub, Positioning Techniques, Accessibility, Advanced
+          CSS Selectors, Forms, Preprocessors,Web UI Platforms, Regular
+          Expressions
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column 1, side buttons - tooltips -->
+        <div class="col-sm-12 col-md-4 button-container bg-light">
+          <!-- modal button -->
+          <button
+            type="button"
+            class="btn btn-info w-100"
+            data-bs-toggle="modal"
+            data-bs-target="#reflectionsModal"
+          >
+            Interviewing?
+          </button>
+          <!-- modal content -->
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="reflectionsModal"
+            tabindex="-1"
+            aria-labelledby="reflectionsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="reflectionsModalLabel">Keys</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    You have created applications for a third party client. Your
+                    first application uses HTML/CSS only, your second
+                    application uses a UI platform, Bootstrap.
+                  </p>
+                  <p>
+                    You have learnt how to use a client specification
+                    (powerpoint) and translate this into an effective
+                    information presentation application.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- button group -->
+          <div class="btn-grp">
+            <button
+              class="btn btn-md btn-success d-block m-4 w-75"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              title="Problem Analysis"
+              data-bs-content="Client Projects, Final Project, Portfolio App"
+            >
+              <span> <i class="bi bi-hand-thumbs-up"></i></span>
+              <span style="margin-left: 10px">Problem Analysis</span>
+            </button>
+
+            <button
+              class="btn btn-md btn-success d-block m-4 w-75"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              title="Design"
+              data-bs-content="Client Projects, Final Project, Portfolio App"
+            >
+              <span> <i class="bi bi-hand-thumbs-up"></i></span>
+              <span style="margin-left: 10px">Design & Implementation</span>
+            </button>
+
+            <button
+              class="btn btn-md btn-success d-block m-4 w-75"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              title="Current Tooling"
+              data-bs-content="Advanced CSS & Preprocessors, Bootstrap, Visual Studio Code, QR Code, Menus"
+            >
+              <span> <i class="bi bi-hand-thumbs-up"></i></span>
+              <span style="margin-left: 10px">Current Tooling</span>
+            </button>
+            <button
+              class="btn btn-md btn-success d-block m-4 w-75"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              title="Best Practices"
+              data-bs-content="Accessibility, Search Engine Optimization, Adobe Colour Wheel"
+            >
+              <span> <i class="bi bi-hand-thumbs-up"></i></span>
+              <span style="margin-left: 10px">Best Practices</span>
+            </button>
+          </div>
+
+          <!-- accordion -->
+          <div style="border: 2px dashed green">
+            <img
+              src="./cookies/seoinfo.jpg"
+              alt=""
+              style="
+                display: inline-block;
+                width: 200px;
+                height: auto;
+                margin-left: 20px;
+              "
+            />
+            <div class="accordion fs-10 m-3" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    What is SEO?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Search Engine Optimization (SEO) is all about how easily and
+                    accurately web pages are accessed by search engines, like
+                    Google. Developers need to be aware of design and structure
+                    of web pages, so they appear in the SERP (SERP - Search
+                    Engine Results Pages).
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Semantic Tags
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Appropriate use of
+                    <a
+                      href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+                      >semantic tags</a
+                    >
+                    is critical.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Meta-data
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Developers should include alt tag data for images, and use
+                    correct information in labels and descriptive fields.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    High Quality Content
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Developers should make sure that information presented is
+                    accurate and appropriate.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Key Word Research
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFive"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Key, trending, search terms should be evaluated and
+                    integrated into key parts of the web page (like h1, article,
+                    main elements), where appropriate.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    Analytics
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingSix"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    SEO Analysis engines are available free, and for a fee.
+                    These should be used by commercial sites to enhance business
+                    outcomes.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end accordion -->
+          </div>
+        </div>
+        <!-- end column 1-->
+
+        <!-- column 2 - content cards -->
+        <div class="col col-sm-12 col-md-8 carousel-area bg-body bg-gradient">
+          <!-- cards container -->
+          <div class="container-fluid d-flex flex-wrap">
+            <div class="card">
+              <div class="card-header">Git, GitHub</div>
+              <img class="card-img" src="./cookies/git.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Software Versioning & Control</p>
+                <button
+                  onclick="openWindow('github.html', 'Git, GitHub')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Git,GitHub"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">CSS Flexbox</div>
+              <img class="card-img" src="./cookies/cssflexbox.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Containers</p>
+                <button
+                  onclick="openWindow('flexbox.html', 'Flex Box')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Git,GitHub"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Font, Favicon</div>
+              <img class="card-img" src="./cookies/favfont.png" alt="" />
+              <div class="card-body">
+                <p class="card-text">Favicons & Fonts</p>
+                <button
+                  onclick="openWindow('favfonts.html', 'favicons & Fonts')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Git,GitHub"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">CSS Selectors</div>
+              <img class="card-img" src="./cookies/selectors.png" alt="" />
+              <div class="card-body">
+                <p class="card-text">Selectors</p>
+                <button
+                  onclick="openWindow('selectors.html', 'CSS Selectors')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Git,GitHub"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Preprocessors</div>
+              <img class="card-img" src="./cookies/preprocessor.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Compiling to CSS</p>
+                <button
+                  onclick="openWindow('preprocessors.html', 'Less, SASS')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Preprocessors"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Accessibility</div>
+              <img class="card-img" src="./cookies/accessibility.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Accessibility</p>
+                <button
+                  onclick="openWindow('.\\accessibility\\index.html', 'Accessibility')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Accessibility"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">UI Platforms</div>
+              <img class="card-img" src="./cookies/bootstrap.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Bootstrap</p>
+                <button
+                  onclick="openWindow('bootstrap.html', 'UI Platforms')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Bootstrap"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">RegEx</div>
+              <img class="card-img" src="./cookies/regex.jpg" alt="" />
+              <div class="card-body">
+                <p class="card-text">Regular Expressions</p>
+                <button
+                  onclick="openWindow('regex.html', 'Regex')"
+                  class="btn btn-md btn-primary d-block m-1"
+                  data-bs-container="body"
+                  title="Git,GitHub"
+                >
+                  <span style="margin-left: 10px">Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- tooltip-->
+          <div class="tooltip-area">
+            <div class="m-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const openWindow = (page, pageTitle) => {
+      const contentWindow = window.open(
+        page,
+        pageTitle,
+        "location=1,status=1,scrollbars=1,width=300,height=300"
+      );
+      contentWindow.moveTo(0, 0);
+    };
+  </script>
+</html>

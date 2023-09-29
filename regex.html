@@ -1,0 +1,538 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>
+
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 20px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>Topic: Regular Expressions</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <p>
+          A regular expression is a set of symbols that describes a text pattern.
+
+A regular expression can be used to ensure correct formatting. It does not mean that the data is accurate, just that it has the required number of digits and letters, and that the user has entered data in accordance with expected data format.
+
+Regular Expressions are used for matching, searching, updating text, on the basis of mirroring a set pattern. Programming languages (like JavaScript, Python...) use regular expressions to validate data input.
+
+The term Regular Expression, is often abbreviated to Regex.
+        </p>
+      </div>
+      <div class="row">
+        <!-- column 1,  -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">
+          <!-- modal button configuration-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#literalModal"
+          >
+            Matching Literal Expressions
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade"
+            id="literalModal"
+            tabindex="-1"
+            aria-labelledby="literalModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="literalModalLabel">
+                    Matching Literals
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>A literal expression is simply a set of characters, like a word or a partial word.
+
+Use / to start delineating the regular expression, and / to finish it. Any characters in-between / and / form the regular expression.
+
+Below, 3 characters, ory, are matched.</p>
+                  <p>
+                    <img src="./cookies/literal0.png" alt="" style="width:250px; height:auto">
+                  </p>
+             
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- meta-characters-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#createRepoModal"
+          >
+            Regular Expression Meta-Characters
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="createRepoModal"
+            tabindex="-1"
+            aria-labelledby="createRepoModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="createRepoModalLabel">
+                    Regex Meta-characters
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    These characters, and others, have special meaning to the regular expression engine.
+                  </p>
+                  <p>
+              <img src="./cookies/meta-characters.png" alt="" style="width:300px; height: auto">
+                  </p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- wildcard-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#wildcardModal"
+          >
+            Wildcard Meta-character
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="wildcardModal"
+            tabindex="-1"
+            aria-labelledby="wildcardModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="wildcardModalLabel">
+                    The Wildcard Meta-Character
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <p>This character matches any one single character, except for newline.
+
+Using the sample text, we can look for occurrences of i<any character>e, using /i.e/. Apply the global flag and see multiple other matches.
+                 </p>
+                 <p>
+
+  <img src="./cookies/meta3.png" alt="" style="width:300px; height:auto;"
+</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    
+          <!-- character sets -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#charactersetModal"
+          >
+            Character Sets
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="charactersetModal"
+            tabindex="-1"
+            aria-labelledby="charactersetModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="charactersetModalLabel">
+                    Character Sets
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Character sets are defined with the beginning and ending square brackets, [ ... ]. They represent one character only from the characters specified in-between the [ and ] pair.
+
+All the occurrences of the letter s, followed by a vowel, are matched below.</p>>
+                   <p>
+                
+<img src="./cookies/charset1.png" alt="" style="width:400px; height:auto;">
+</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                              
+
+        </div>
+        <!-- column 2 -->
+        <div class="col-sm-12 col-md-2 m-2 button-container bg-light">
+    <div class="tooltip-area">
+            <div class="m-4">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Regular Expressions  "
+              >
+                <img
+                  src="./cookies/regexer.jpg"
+                  style="width: 120px; height: auto;"
+                />
+            </div>
+              </div>
+
+        </div>
+      </div>
+              <!-- column 3 -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">    
+                    <!-- ranges -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#rangesModal"
+          >
+            Using Character Ranges 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="rangesModal"
+            tabindex="-1"
+            aria-labelledby="rangesModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ignoreFileModalLabel">
+                    Using Character Ranges
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+             
+
+ <p>
+Character ranges help with specifying a series of characters in a range, like a through z, or 1 through 9 (digits are characters, with numeric meaning). Characters that can be matched in this way should logically follow each other.
+
+Character ranges are specified with a - (dash) meta-character, and the character range feature assumes that the characters have an ordering.
+
+</p>
+<p>
+  <img src="./cookies/charranges1.png" alt="" style="width:400px; height: auto;">
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>                         
+          <!-- negate -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#negateModal"
+          >
+            The Negate Meta-character 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="negateModal"
+            tabindex="-1"
+            aria-labelledby="negateModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="negateModalLabel">
+                    Using The Negate Meta-character
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+
+
+Characters are dis-included with the negate meta-character, used inside a character set.
+
+For example, suppose we want to target NOT H, followed by ea, followed by any character, below.</p>
+
+
+<p>
+<img src="./cookies/negate.png" alt=""style="width:400px; height: auto;">
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <!-- Repetition meta characters -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#repetitionModal"
+          >
+            Repetition Meta-characters 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="repetitionModal"
+            tabindex="-1"
+            aria-labelledby="repetitionModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="repetitionModalLabel">
+                    Repetition Meta-characters
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+   Regular expression engines support repeated character sequences.
+
+</p>
+<img src="./cookies/repeat1.png" alt="" style="width:250px; height:auto;">
+<p>Variable repetition is useful, as specified with the repetition meta-characters.</p>
+<img src="./cookies/repeat1-1.png" alt="" style="width:400px; height:auto;">
+<p>Discrete (a specified number of times) repetition is done using the {..}.</p>
+<img src="./cookies/exactrepeat4.png" alt="" style="width:400px; height:auto;">
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- special character notation -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#specialcharModal"
+          >
+            Special Characters 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="specialcharModal"
+            tabindex="-1"
+            aria-labelledby="specialcharModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="specialcharModalLabel">
+                    Special Characters
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+Special characters denote letters, digits, white space.</p>
+<p><img src="./cookies/specialchars.png" alt="" style="width:400px; height: auto;"></p>
+<p>Here, we look for word letters indicated by the regular expression engine and occurring zero or more times, followed by a comma, followed by one or more digits.</p>
+<p><img src="./cookies/shorthand1.png" alt ="" style="width:400px; height:auto"></p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+  </body>
+</html>

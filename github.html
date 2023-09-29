@@ -1,0 +1,592 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git, Github</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>
+
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 20px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>Topic: Git/GitHub</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column 1, side buttons - tooltips -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">
+          <!-- modal button configuration-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#configuringModal"
+          >
+            Configuring GitHub
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade"
+            id="configuringModal"
+            tabindex="-1"
+            aria-labelledby="configuringModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="configuringModalLabel">
+                    Basic Configuration
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>$ git config --global user.name "Annie Student"</p>
+                  <p>
+                    $ git config --global user.email annie_student@you_who.com
+                  </p>
+                  <p>
+                    The user name and e-mail are then associated with your
+                    account.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creating a GitHub repository-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#createRepoModal"
+          >
+            Creating a GitHub Repository
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="createRepoModal"
+            tabindex="-1"
+            aria-labelledby="createRepoModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="createRepoModalLabel">
+                    Creating Your GitHub Repository
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    We have you login to GitHub, using your login credentials,
+                    and create a new repository. You are given Git commands to
+                    type in the command line, where anniestudent/xyz is the
+                    reference to your repository.
+                  </p>
+                  <p>
+                    First, navigate to your folder you will use for the source
+                    code you will be putting in the repository ($ cd
+                    myProjectFolder), type
+                  </p>
+                  <p>$ git init</p>
+                  <p>
+                    $ git remote add origin https://github.com/anniestudent/xyz
+                  </p>
+                  <p>$ git branch -M main</p>
+                  <p>$ git push -u origin main</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Staging for a GitHub repository-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#stagingModal"
+          >
+            Staging Files For a GitHub Repository
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="stagingModal"
+            tabindex="-1"
+            aria-labelledby="stagingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="stagingModalLabel">
+                    Staging Files
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                 Before you add files to the GitHub repository, you have to let Git know about them. To do this you stage the files (Git's term) or put them in the staging area, by using:</p>
+                 <p>
+$ git add .    or     git add --All    or    git add -A   or  $ git add *.js</p>
+
+<p>
+This puts a set of files in a holding state, before being pushed to the GitHub repository.
+
+Adding the files to the staging area is like queuing up a set of changes to be committed.</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    
+          <!-- Committing to a GitHub repository-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#committingModal"
+          >
+            Committing Files to a GitHub Repository
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="committingModal"
+            tabindex="-1"
+            aria-labelledby="committingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="stagingModalLabel">
+                    Committing Files
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                   Save in the GitHub repository permanently.
+                   <p>
+                
+$ git commit -m "some text describing the commit"
+</p>
+<p>
+Then, push the files to the GitHub repository,
+</p>
+ <p>
+$ git push -u origin main
+                   </p>
+<p>
+3 possible states for any file in the folder:</p>
+<table>
+    <tr>
+    <th>State</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td class="bg-light">Staged</td>
+        <td>- ready to be committed - all necessary changes made</td>
+    </tr>
+    <tr>
+        <td class="bg-light">Unmodified</td>
+        <td>- No changes made to file</td>
+    </tr>
+    <tr>
+        <td class="bg-light">Modified</td>
+        <td>- some changes made, not yet saved</td>
+    </tr>
+    <tr>
+        <td class="bg-light">Committed</td>
+        <td>- all changes made and saved in local repository</td>
+    </tr>
+</table>
+
+<p>
+Reveal the status of any file in the folder, $ git status
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                              
+          <!-- ignoring content -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#ignoreFileModal"
+          >
+            Ignore Files 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="ignoreFileModal"
+            tabindex="-1"
+            aria-labelledby="ignoreFileModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ignoreFileModalLabel">
+                    Ignore Files
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                   Ignore certain files.
+
+ <p>
+create a file called .gitignore, and add any files or folders you do not want to be included in the project files - then, when a 
+<p>$ git add --All</p> command is issued, these files will not be included in the staging area, will not be committed, and will not be stored in the GitHub repository.
+
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column 2, git,github - tooltips -->
+        <div class="col-sm-12 col-md-2 m-2 button-container bg-light">
+    <div class="tooltip-area">
+            <div class="m-4">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Open Source, Source Code Management Tool  "
+              >
+                <img
+                  src="./cookies/git.png"
+                  style="width: 120px; height: auto;"
+                />
+            </div>
+              </div>
+              <div class="m-4">
+                 <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Internet hosting service for software development and version control using Git"
+              >
+                <img
+                  src="./cookies/github.jpg"
+                  style="width: 80px; height: auto;"
+                />
+              </span>
+              </div>
+        </div>
+      </div>
+              <!-- column 3, branching -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">                             
+          <!-- branching -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#branchingModal"
+          >
+            Branching 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="branchingModal"
+            tabindex="-1"
+            aria-labelledby="branchingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="branchingModalLabel">
+                    Branching
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+A branch is a snapshot of the code from the last commit. To create a branch, with a title of branchA from the command line, type the following:</p>
+<p>$ git checkout -b branchA</p>
+
+                                                                                                           or
+<p>$ git switch -c branchA</p>
+<p>
+This creates a new and independent copy of the code in the last commit, whatever that was. You can then add files to this branch, but not to main.
+
+ 
+
+</p>
+<p>To add the files to the branchA branch,</p>
+$ git push origin branchA
+
+
+<p>Switch back to the main branch by typing,</p>
+$ git checkout main
+<br>
+                                                                                                              or<br>
+$ git switch main
+
+ 
+
+<p>See all and every branch by typing</p>
+$ git branch
+
+ 
+
+<p>Download a copy of a branch, like main</p>
+$ git clone main
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- merging -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#mergingModal"
+          >
+            Merging 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="mergingModal"
+            tabindex="-1"
+            aria-labelledby="mergingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mergingModalLabel">
+                    Merging
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+To merge the changes made in say, branchA, you would switch back into the main branch and then run the command,</p>
+$ git merge branchA
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <!-- Git Flow -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#flowModal"
+          >
+            Typical Git Flow 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="flowModal"
+            tabindex="-1"
+            aria-labelledby="flowModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="flowModalLabel">
+                    Git Flow
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+    The typical development sequence for a branch is,
+<ul>
+    <li>create the branch ( git checkout...) and add the code
+    <li>make changes to the branch, and test
+    <li>merge the changes with the main branch (switch to main, then use git merge)
+    <li>get rid of the branch, delete the branch (use git branch -d ...)
+</ul>
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,665 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preprocessors</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>
+
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 20px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>Topic: Preprocessors</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column 1, side buttons - tooltips -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">
+          <p>A CSS pre-processor is like a stylesheet programming language.
+
+ 
+
+CSS preprocessors provide features that CSS does not, advanced features that developers can use to create CSS, while spending less time on the whole process than they would with plain, regular, CSS.
+
+             Slowly, CSS is evolving to incorporate some of these additions.</p><p>We introduced Less (Leaner style Sheets) and SASS (Simply Awesome Style Sheets). Less works on a JavaScript engine and can be compiled dynamically. You can include a .Less file in your .html file directly. SASS has 2 variants, one(SASS) uses indentation to delineate the scope of style rules, the other(SCSS) uses curly braces ({...})</p>
+
+        </div>
+        <!-- column 2, less,sass -->
+        <div class="col-sm-12 col-md-2 m-2 button-container bg-light">
+    <div class="tooltip-area">
+            <div class="m-4">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Less  "
+              >
+                <img
+                  src="./cookies/less.png"
+                  style="width: 100px; height: auto;"
+                />
+            </div>
+              </div>
+              <div class="m-4">
+                 <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="SASS"
+              >
+                <img
+                  src="./cookies/sass.png"
+                  style="width: 100px; height: auto;"
+                />
+              </span>
+              </div>
+        </div>
+      </div>
+              <!-- column 3, features -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">  
+          <p>Ultimately, the browser only understands CSS. All preprocessor code has to be transpiled to CSS.</p>                           
+          <!-- variables -->
+          <!-- modal button configuration-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#variablesModal"
+          >
+            Using Variables
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade"
+            id="variablesModal"
+            tabindex="-1"
+            aria-labelledby="variablesModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="variablesModalLabel">
+                    Using Variables
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Variables are also now defined in CSS.</p>
+                  <p>
+                    Using Less, variables are preceded with @, and directly referenced in CSS, so long as the Less content has been included. If the content of the file, variables.less, is described below,
+                  </p>
+                  <p>
+                  @backgroundColor: lightgrey;<br>
+@navColor: orange;<br>
+@footerColor:lighten(grey, 60%);<br>
+                  </p>
+                  <p>
+... and this file is included in a CSS file, <br>@import url(./variables.less); 
+                  </p>
+                  <p>then the variables can be directly referenced after being compiled within the browser, using the @ symbol, in a css file,</p>
+<p>body{<br>
+    background-color: @background_color;<br>
+}</p>
+<p>In the SCSS variant of SASS, we use the $ to precede a variable declaration.</p>
+<p>
+  $header_width: 50%;<br>
+$base_unit: 10px;<br>
+$header_height: ($base_unit * 5) + 10px;
+</p>
+<p>These are then referenced after compilation to CSS,</p>
+<p>
+  #headerStyle {<br>
+  position: relative;<br>
+  height: $header_height;<br>
+  ...<br>
+  }
+</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- mixins -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#mixinModal"
+          >
+            Mixins
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="mixinModal"
+            tabindex="-1"
+            aria-labelledby="mixinModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mixinModalLabel">
+                    Using Mixins
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Mixins allow the use of multiple classes, subsumed within one class or id.
+                  </p>
+                  <div class="container-fluid p-0 m-0">
+                    <p>With Less, given classes bordered, neely_word_format, vertically_aligned, below</p>
+<div class="row" style="font-size: smaller;">
+    <div class="col-4">              
+                 
+.bordered {<br>
+  border-left: 2 * @base_unit;<br>
+  ...<br>
+}<br>
+</div>
+<div class="col-4">
+.neely_word_format {<br>
+...<br>
+}<br>
+</div>
+<div class="col-4">
+.vertically_offset {<br>
+  padding-top: 30px;<br>
+}<br>
+</div>
+</div>
+</div>
+<p>... id word_of_the_day can be defined to include those classes.</p>
+#word_of_the_day {<br>
+  .bordered();<br>
+  .neely_word_format();<br>
+  .vertically_offset();<br>
+}<br>
+                  <p></p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- nesting-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#nestingModal"
+          >
+            Nesting Selectors
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="nestingModal"
+            tabindex="-1"
+            aria-labelledby="nestingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="nestingModalLabel">
+                    Nesting Selectors
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                Nesting is the inclusion of selectors within a parent selector, so style rules apply to elements within that parent selector only.</p>
+<p>
+  Below, note how Less handles the nesting of class logo and selector h2, scoped only for the id, lessonArea. The media query applies to id, lessonArea.
+
+</p>
+<p>
+  #lessonArea {<br>
+  margin-top: 5px;<br>
+  .level2 {<br>
+    font-size: 16px;<br>
+  }<br>
+  .logo {<br>
+    width: 8 * @base_unit;<br>
+    background-color: antiquewhite;<br>
+    background-size: contain;<br>
+  }<br>
+  h2 {<br>
+    background-color: antiquewhite;<br>
+  }  <br>
+  @media (max-width: @small_device_width) {<br>
+    width: 95%;<br>
+    h1::after {<br>
+      content: "\1F4f1";<br>
+    }<br>
+  }<br>
+</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    
+          <!-- Preprocessors and functions -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#functionsModal"
+          >
+            Using Preprocessor Functions
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="functionsModal"
+            tabindex="-1"
+            aria-labelledby="functionsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="stagingModalLabel">
+                    Using Preprocessor Functions
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                   Functions are a powerful extension to the effectiveness of CSS.There are many functions that can be used to professional effect.
+                   <p>
+                
+In Less, the lightness of the colour of background can be modified,
+</p>
+<p>  background-color: lighten(@mtVernon_background_colour, 15%);</p>
+<p>Multiple other such functions make styling more flexible for the developer.</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                              
+          <!-- interpolation -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#interpolationModal"
+          >
+            Interpolation & Building Selectors
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="interpolationModal"
+            tabindex="-1"
+            aria-labelledby="interpolationModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ignoreFileModalLabel">
+                    Interpolation & Building Selectors
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                   Interpolation is used to build new selectors.
+
+ <p>
+In SCSS, interpolation aids in the generation of specific classes and makes SCSS much more flexible in terms of the ability to generate a range of styling.
+
+In SCSS, interpolation is done with this syntax,<br>
+
+                                                     #{ ... }<br>
+
+where the variable is inside the curly braces, {..}.
+<br>
+In the following SASS example, we generate a set of heading styles, using interpolation to name the selector. We use a mixin, and pass in a value to be used for the font.
+
+</p>
+<img src="cookies/interpol8.png" alt=""style="width:80%; height:auto;">
+<p>
+
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--  -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#listModal"
+          >
+            Using Preprocessor Lists 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="listModal"
+            tabindex="-1"
+            aria-labelledby="listModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="listModalLabel">
+                    Lists & Preprocessors
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+A list is a group of objects, like an array in JavaScript. The content of a list is accessed with a subscript or index.Lists with SCSS are 1 based - first element starts at index 1.
+</p>
+<p>Lists in SCSS are defined, using multiple formats, below.</p>
+<img src=".\cookies/scsslist.png" alt="" style="width:300px; height:auto;"/>
+<p>Use a list to generate custom CSS:</p>
+<img src=".\cookies/scsslistuse.png" alt="" style="width:300px; height:auto;"/>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Iterating through lists -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#iteratingModal"
+          >
+            Iteration - @each, @for
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="iteratingModal"
+            tabindex="-1"
+            aria-labelledby="iteratingModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="iteratingModalLabel">
+                    Iterating, @each & @for Directives
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+List items are accessed with a 1-based index, so loops can be used to iterate through lists.
+One technique is the @each directive in SCSS.</p>
+<img src="./cookies/eachscss.png" alt="" style="width:350px; height: auto;">
+<p>The SCSS @for directive support use of numeric ranges.</p>
+<img src="./cookies/scssfor.png" alt="" style="width:350px; height: auto">
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <!-- Maps -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#mapModal"
+          >
+            Preprocessor Maps
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="mapModal"
+            tabindex="-1"
+            aria-labelledby="mapModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mapModalLabel">
+                    Using Preprocessor Maps
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+    Maps are data structures composed of key value pairs (like dictionaries). Maps bring organization and allow for greater flexibility in styling with associated values, like seasonal color themes.
+
+</p>
+<img src="./cookies/scssmap.png" alt="" style="width: 350px; height:auto;"
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                          <!-- Conditionals -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#conditionalModal"
+          >
+            Conditionals
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="conditionalModal"
+            tabindex="-1"
+            aria-labelledby="conditionalModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mapModalLabel">
+                    Using Conditionals
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+    Conditionals allow specificity in generating style rules. Conditionals can be used with lists, maps and other features of a preprocessor, to promote creation of style rules corresponding to precise needs.
+
+</p>
+<img src="./cookies/conditionalscss.png" alt="" style="width: 350px; height:auto;"
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

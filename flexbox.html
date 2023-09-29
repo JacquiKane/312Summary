@@ -1,0 +1,459 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <script src="enabler.js" defer></script>
+
+    <style>
+      .accordion-area {
+        width: 400px;
+      }
+
+      .button-container {
+        padding: 20px;
+      }
+      .button-container .btn {
+        width: 150px;
+      }
+      .jumbotrone {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid justify-content-center bg-info">
+        <h1>Review 312, Advanced Web Design</h1>
+        <p>Topic: Flex</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column 1, side buttons - tooltips -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">
+          <!-- modal button configuration-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#useFlexModal"
+          >
+            Why Use Flex?
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade"
+            id="useFlexModal"
+            tabindex="-1"
+            aria-labelledby="useFlexModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="useFlexModalLabel">
+                    layout Convenience
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Flexbox is short for flexible box. It was introduced to CSS as far back as 2009, as a web layout model. As it has evolved, it is a web layout model, a way to implement flexible sizing and support responsive design, as well as a way to order the display of items on a web page, without having to design the markup in sequence to support a particular order.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creating a flex container-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#createFlexModal"
+          >
+            Creating a flex container
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="createFlexModal"
+            tabindex="-1"
+            aria-labelledby="createFlexModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="createFlexModalLabel">
+                    Creating Your Flex Container
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Flexbox is described by setting attribute, display, to flex. All elements within the flex container are flex items, each with their own properties, but recognized as elements within a flex container.
+                    </p>
+                    <p>
+                     <img
+                  src="./cookies/displayflex.png"
+                  style="width: 230px; height: auto;"
+                />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- Flex direction-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#flexDirectionModal"
+          >
+            Setting Flex Direction
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="flexDirectionModal"
+            tabindex="-1"
+            aria-labelledby="flexDirectionModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="flexDirectionModalLabel">
+                    The Flex Direction
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                 Flex box arranges items along a main axis, horizontal(default) or vertical.
+
+The cross axis is perpendicular to the main axis, like the XY plain, if the X axis is the main axis, the Y axis is the cross axis and vice versa.
+</p>
+
+<div class="container-fluid m-0 p-0">
+  <div class="row">
+  <div class="col col-5">
+    <p>
+Flex items flow along the main axis. Default positioning is modified by attributes, including main-start and main-end.
+</p>
+</div>
+<div class="col col-5">
+<img class="position-absolute"
+                  src="./cookies/flexboxcol.png"
+              style="width: 200px; height: auto;"  />
+</div>
+                 <p>
+If flex-direction is set to column, the main axis is vertical. </p>
+</div>
+</div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+                    
+          <!-- changing flex item order markup-->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#reverseOrderModal"
+          >
+            Changing Order With Flex Box
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="reverseOrderModal"
+            tabindex="-1"
+            aria-labelledby="reverseOrderModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="reverseOrderModalLabel">
+                    Committing Files
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="container-fluid m-0 p-0">
+                                      <div class="row">
+                                        <div class="col-5">
+<p>
+The flex container attribute values of row-reverse, column-reverse, reverse the order of flex items. </p>
+</div>
+<div class="col-5">
+<img class="position-absolute"
+                  src="./cookies/colrevflex.png"
+              style="width: 200px; height: auto;"  />
+</div>
+</div>
+<p>The order of the flex items can be set with the order property, applied to individual flex items. This alters the order in which the items appear, but not the order of the markup.
+
+By default, all of the flex items have an order number of 0, and appear in the order in which they are listed in the HTML file. When the order property is changed, the flex items are listed starting from the lowest number - this can be negative or positive.</p>
+<img class="position-absolute"
+                  src="./cookies/flexorder.png"
+              style="width: 100%; height: auto;"  />
+</div>
+
+<p>
+
+</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                              
+          <!-- flex-wrap -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#flexWrapModal"
+          >
+            Wrapping Flex Items 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="flexWrapModal"
+            tabindex="-1"
+            aria-labelledby="flexWrapModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="flexWrapModalLabel">
+                    Wrap Flex Items To Prevent Overflow
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+ <p>
+By default, items will not flow to the next line of a flex container. Instead, they will overflow.
+
+</p>
+<img
+                  src="./cookies/flexoverflow.png"
+              style="width: 100%; height: auto;"  />
+
+<p>Change this, by setting the flx-wrap property to wrap (the default is no-wrap).</p>
+<img
+                  src="./cookies/flexwrap.png"
+              style="width: 100%; height: auto;"  />
+
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column 2 - tooltips -->
+        <div class="col-sm-12 col-md-2 m-2 button-container bg-light">
+    <div class="tooltip-area">
+            <div class="m-4">
+              <div
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Convenient Layout Technique  "
+              >
+                <img
+                  src="./cookies/cssflexbox.jpg"
+                  style="width: 120px; height: auto;"
+                />
+            </div>
+              </div>
+        </div>
+      </div>
+              <!-- column 3 -->
+        <div class="col-sm-12 col-md-4 m-2 button-container bg-light">                             
+          <!-- sizing -->
+          <button
+            type="button"
+            class="btn btn-info w-100 m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#sizingFlexModal"
+          >
+            Sizing Flex Items 
+          </button>
+          <!-- modal content configuration -->
+          <div
+            class="modal fade""
+            id="sizingFlexModal"
+            tabindex="-1"
+            aria-labelledby="sizingFlexModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content overflow-hidden">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sizinFlexModalLabel">
+                    Sizing Flex Items
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+
+ <p>
+Flex items can grow or shrink, as determined by the flex-grow, flex-shrink (space ratios for grow/shrink) and flex-basis(ideal size) properties. These are combined in the flex property.</p>
+
+
+<div class="container-fluid m-0 p-0">
+  <div class="row">
+<div class="col-4">
+  flex : 0 1 100px; 
+</div>
+<div class="col-8">   sets
+ flex-grow property OFF, flex-shrink ON, 
+gives  element width or height value of 100px.</div>
+</div>
+</div>
+<p>
+Individual flex items can be sized differently, flex items must be dealt with individually.
+</p>
+                <img
+                  src="./cookies/flexitemsize.png"
+                  style="width: 100%; height: auto;"
+                />
+<p>
+
+If we have a class, moreSpace, and apply to an article,that article will take up twice as much space as the default when the row space is divided up between all of the flex items.
+</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

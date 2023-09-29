@@ -1,0 +1,16 @@
+.card {
+	width: 18rem;
+}
+
+.card-body > button {
+	width: 80%;
+}
+
+#card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	/* Aligns the container with the buttons */
+	padding: 0px 12px;
+}
